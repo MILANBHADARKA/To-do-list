@@ -44,6 +44,7 @@ nav > span {
     gap: 15px;
     min-height: 250px;
     min-width: 300px;
+    /* width: 320px; */
     border-radius: 10px;
     background-color: hsl(200, 87%, 81%);
 }
@@ -118,8 +119,14 @@ input{
     cursor: pointer;
 }
 
+.todos{
+    max-width: 330px;
+    overflow:auto;
+}
+
 li{
     font-family: 'Russo One', sans;
+    list-style: none;
 }
 
 
@@ -150,5 +157,16 @@ li{
 
     nav > span {
         font-size: 17px;
+    }
+}
+
+@media only screen and (max-width: 246px){
+    body{
+        padding: 20px;
+        transform: scale(0.6);
+    }
+
+    nav > span {
+        font-size: 15px;
     }
 }

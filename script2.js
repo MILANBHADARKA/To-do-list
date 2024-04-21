@@ -2,6 +2,7 @@ let main = document.querySelector('.main');
 let todos = document.querySelector('.todos');
 let input = document.querySelector('input');
 
+
 let add = document.querySelector('.add');
 add.addEventListener( 'click', (event) => {
     event.preventDefault();
@@ -29,6 +30,12 @@ for(let i = 0; i < localStorage.length; i++) {
     let li = document.createElement('li');
     li.classList.add('todo-item');
     li.id = i;
+
+    let img = document.createElement('img');
+    img.src = './arrow.svg';
+    img.style.width = '15px';
+    img.style.marginRight = '5px';
+    li.appendChild(img);
 
     let span = document.createElement('span');
     span.innerText = localStorage.getItem(i);
@@ -58,9 +65,15 @@ for(let i = 0; i < localStorage.length; i++) {
     edit.style.margin = '7px';
     li.appendChild(edit);
 
+    let hr = document.createElement('hr');
+    hr.style.width = '96%';
+    hr.style.margin = '1px';
+
+
 
 
     todos.appendChild(li);
+    todos.appendChild(hr);
 
 }
 
